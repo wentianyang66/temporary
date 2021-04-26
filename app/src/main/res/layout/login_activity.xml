@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<novel.mzx.com.views.InputMethodLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view"
+        style="@style/view" />
+
+    <ScrollView
+        android:id="@+id/root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_close"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_toRightOf="@+id/layout_back"
+                android:background="@color/colorPrimary"
+                android:visibility="visible"
+
+                >
+
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:src="@mipmap/cha"
+                    android:visibility="gone" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:text="Log in"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16"
+                    android:visibility="visible" />
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:visibility="visible"
+
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_50"
+                android:orientation="horizontal"
+
+                >
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"></View>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="Welcome to keepup"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/dp_18"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_50"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:background="@mipmap/phone"></ImageView>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/dp_30"
+                    android:background="@color/colorPrimary"></View>
+
+                <EditText
+                    android:id="@+id/et_phoneNum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center|start"
+                    android:hint="Please enter username"
+                    android:padding="@dimen/dp_12"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_50"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:background="@mipmap/password"></ImageView>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/dp_30"
+                    android:background="@color/colorPrimary"></View>
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center|start"
+                    android:hint="please enter password"
+                    android:inputType="textPassword"
+                    android:padding="@dimen/dp_12"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/button2"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/btn_bg"
+                android:text="log in"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_regiest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="right"
+                android:paddingRight="@dimen/dp_30"
+                android:text="register"
+                android:textColor="@color/darker_gray"
+                android:textSize="@dimen/dp_16"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/test_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="right"
+                android:paddingRight="@dimen/dp_30"
+                android:text="Test"
+                android:textColor="@color/darker_gray"
+                android:textSize="@dimen/dp_16"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</novel.mzx.com.views.InputMethodLayout>

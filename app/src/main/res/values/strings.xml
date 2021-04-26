@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Keepup</string>
+    <string name="tab_home">Level Test</string>
+    <string name="tab_second">Exercice Recomendation</string>
+    <string name="tab_shujia">Shared Media</string>
+    <string name="tab_three">Personal Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

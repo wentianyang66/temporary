@@ -1,0 +1,305 @@
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:addStatesFromChildren="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <ImageView
+                android:id="@+id/mIv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_below="@+id/view"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/dp_30"
+                    android:textSize="@dimen/sp_16"
+                    android:text=""/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/iv_search"
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@mipmap/sousuo"/>
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/item_detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="title"
+                    android:layout_centerVertical="true"
+                    ></TextView>
+                <RelativeLayout
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_button_white"
+                    >
+                    <EditText
+                        android:id="@+id/et_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Please enter the title"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:background="@null"
+                        android:textSize="14sp"
+                        ></EditText>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="content"
+                    android:layout_centerVertical="true"
+                    ></TextView>
+                <RelativeLayout
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_button_white"
+                    >
+                    <EditText
+                        android:id="@+id/et_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Please enter content"
+                        android:gravity="top"
+                        android:paddingLeft="10dp"
+                        android:background="@null"
+                        android:textSize="14sp"
+                        android:paddingTop="@dimen/dp_10"
+                        ></EditText>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="10dp"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="weight"
+                    android:layout_centerVertical="true"
+                    ></TextView>
+                <RelativeLayout
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_button_white"
+                    >
+                    <EditText
+                        android:id="@+id/et_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Please enter weight"
+                        android:inputType="number"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:background="@null"
+                        android:textSize="14sp"
+                        ></EditText>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="10dp"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Target weight"
+                    android:layout_centerVertical="true"
+                    ></TextView>
+                <RelativeLayout
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_button_white"
+                    >
+                    <EditText
+                        android:id="@+id/et_mubiao"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Please enter target weight"
+                        android:inputType="number"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:background="@null"
+                        android:textSize="14sp"
+                        ></EditText>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="10dp"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="sex"
+                    android:layout_centerVertical="true"
+                    ></TextView>
+                <RelativeLayout
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        >
+                        <ImageView
+                            android:id="@+id/cb_01"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:button="@null"
+                            android:background="@mipmap/radiobuttonon"
+                            ></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="man"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="10dp"
+                            >
+
+                        </TextView>
+
+                        <ImageView
+                            android:id="@+id/cb_02"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:button="@null"
+                            android:background="@mipmap/radiobuttonoff"
+                            android:layout_marginLeft="10dp"
+                            ></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="woman"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="10dp"
+                            >
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <Button
+                android:id="@+id/button_add"
+                style="?android:textAppearanceMediumInverse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_bg"
+                android:text="add"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+</android.support.v4.widget.SwipeRefreshLayout>
